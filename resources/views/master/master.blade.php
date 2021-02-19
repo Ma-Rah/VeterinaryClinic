@@ -15,6 +15,12 @@
 		@include('common.top_menu', [
 		'current' => $current_menu_item ?? null
 		])
+
+			<form action="{{ action('OwnersController@search') }} ">
+				<input type="text" placeholder='search for a dog or a owner' name='search'>
+				<button action='submit'>Search</button>
+			</form>
+
 	</div>
 
 	
