@@ -28,6 +28,7 @@ Route::post('/pet-update', 'PetUpdateController@store');
 Route::get('/owner-update', 'OwnerUpdateController@index');
 Route::post('/owner-update', 'OwnerUpdateController@store');
 
-Route::get('/search-results', 'OwnersController@search');
+Route::get('/owner-search-results', 'OwnersController@search');
+Route::get('/pet-search-results', 'PetsController@search');
 
 Route::get('/results', 'ResultsController@index');
