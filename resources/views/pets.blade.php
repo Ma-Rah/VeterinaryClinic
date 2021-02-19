@@ -3,6 +3,8 @@
 @section('content')
 
    <h1>Pets</h1>
+
+
 <ul>
 	@foreach ($pets as $pet)
 	<li >

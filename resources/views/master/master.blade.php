@@ -57,11 +57,11 @@ html, body {
 }
 
 .content {
-padding:  0 2rem;
+padding: 2rem;
 display:flex;
 flex-flow: column nowrap;
 align-items: center;
-justify-content:center;
+justify-content:flex-start;
 height: 90vh;
 
 }
@@ -76,7 +76,7 @@ display:flex;
 flex-flow: column nowrap;
 justify-content: center;
 grid-template-columns: 1fr;
-grid-template-rows: 100px 1fr ;
+grid-template-rows: 1fr 1fr ;
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
@@ -152,11 +152,7 @@ li {
 		font-size: 1.2rem;
 	}
 
-	.content {
-		justify-content: center;
-		align-items:center;
-		
-	}
+
 
 	ul {
 		
