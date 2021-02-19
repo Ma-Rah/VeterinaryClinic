@@ -8,4 +8,7 @@
 	<li>Name: {{$owner->first_name}} {{$owner->surname}}</li>
 	@endforeach
 </ul>
+
+<div class="links">{{ $owners->links() }}</div>
+
 @endsection

@@ -9,7 +9,7 @@ class OwnersController extends Controller
 {
 	public function index() 
     { 
-		$owners = DB::table('owners')->get();
+		$owners = DB::table('owners')->paginate(25);
 		
         return view('owners', compact('owners'));
     }

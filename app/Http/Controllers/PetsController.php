@@ -10,7 +10,7 @@ class PetsController extends Controller
 {
     public function index() 
     { 
-		$pets = DB::table('pets')->get();
+		$pets = DB::table('pets')->paginate(25);
 		
         return view('pets', compact('pets'));
     }

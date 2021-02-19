@@ -8,4 +8,6 @@
 	<li>{{$pet->name}}</li>
 	@endforeach
 </ul>
+<div class="links">{{ $pets->links() }}</div>
+
 @endsection

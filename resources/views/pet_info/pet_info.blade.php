@@ -6,6 +6,7 @@
 <h2>Breed: {{$pet->breed}}</h2>
 <h2>Weight: {{$pet->weight}}</h2>
 <h2>Age: {{$pet->age}}</h2>
+<img src="{{asset('images/'.$pet->photo)}}" alt="">
 
 
 @endsection
