@@ -17,35 +17,107 @@
 		])
 	</div>
 
+	
+
 		<div class="content">
 			@yield('content')
 		</div>
 
-	</div>
+		<div class="links"> </div>
+</div>
 
 	<style>
-	.parent {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+
+
+* {
+	box-sizing: border-box;
 }
 
+
+
+a {
+	text-decoration: none;
+	color: black;
+
+}
+
+html, body {
+	height: 100%;
+	margin:0;
+	font-size: 1.2rem;
+}
+
+.content {
+padding:  2rem;
+line-height: 1.8rem;
+
+}
+
+.parent {
+
+display:flex;
+flex-flow: column nowrap;
+justify-content: space-between;
+
+
+grid-template-columns: 1fr;
+grid-template-rows: 100px 1fr ;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+a {
+	color: tomato;
+}
+
+li {
+	padding: 0 0.5rem;
+}
+
+/* .top-menu { grid-area: 2 / 1 / 3 / 2; }
+.content { grid-area: 3 / 1 / 4 / 2; }
+.links { grid-area: 1 / 1 / 2 / 2; } */
+
 .top-menu {
-	background: darkgrey;
+	background: tomato;
+	display:flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .top-menu a {
 	text-decoration: none;
 	font-size: 2rem;
-	padding: 1rem;
+	margin: 1.5rem 1rem;
+	font-weight: bold;
+	color: white;
 }
+
+.links {
+	width: 100%;
+
+	
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items:center;
+	text-align: center;
+	justify-self: flex-end;
+	
+}
+
 
 .links svg{
 	height: 50px;
 	width: 50px;
+}
 
+.pet-photo {
+	height: 300px;
+	width: 300px;
+	border-radius: 5px;
+	object-fit:cover;
+	
 }
 </style>
 </body>
