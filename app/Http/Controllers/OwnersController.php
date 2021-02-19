@@ -17,7 +17,8 @@ class OwnersController extends Controller
 	public function show($id)
     {
         $owner = DB::table("owners")->find($id);
-      
-        return view("owner_info.owner_info", compact(["owner"]));
+		$pets =  DB::table("pets")->where('owner_id', $id)->get();
+
+        return view("owner_info.owner_info", compact(["owner", 'pets']));
     }
 }

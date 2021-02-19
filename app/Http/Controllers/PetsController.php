@@ -18,7 +18,9 @@ class PetsController extends Controller
 	public function show($id)
     {
         $pet = DB::table("pets")->find($id);
-      
-        return view("pet_info.pet_info", compact(["pet"]));
+
+		$owner =  DB::table("owners")->where('id', $pet->owner_id)->get();
+		
+        return view("pet_info.pet_info", compact(["pet",'owner']));
     }
 }
