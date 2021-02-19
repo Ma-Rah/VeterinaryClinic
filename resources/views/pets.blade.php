@@ -3,9 +3,9 @@
 @section('content')
 
    <h1>Pets</h1>
-<ul></ul>
+<ul>
 	@foreach ($pets as $pet)
-	<li>
+	<li >
 	<a href="{{action('PetsController@show', $pet->id)}}">
 	
 	{{$pet->name}}</a></li>

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinary Clinic</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	
 
 </head>
@@ -23,7 +25,7 @@
 
 	</div>
 
-	
+
 
 		<div class="content">
 			@yield('content')
@@ -48,24 +50,31 @@ a {
 }
 
 html, body {
+	font-family: 'Poppins', sans-serif;
 	height: 100%;
 	margin:0;
-	font-size: 1.2rem;
+	
 }
 
 .content {
-padding:  2rem;
-line-height: 1.8rem;
+padding:  0 2rem;
+display:flex;
+flex-flow: column nowrap;
+align-items: center;
+justify-content:center;
+height: 90vh;
 
+}
+
+h1 {
+	margin: 0;
 }
 
 .parent {
 
 display:flex;
 flex-flow: column nowrap;
-justify-content: space-between;
-
-
+justify-content: center;
 grid-template-columns: 1fr;
 grid-template-rows: 100px 1fr ;
 grid-column-gap: 0px;
@@ -76,8 +85,10 @@ a {
 	color: tomato;
 }
 
+
 li {
 	padding: 0 0.5rem;
+	list-style-type:square;
 }
 
 /* .top-menu { grid-area: 2 / 1 / 3 / 2; }
@@ -94,23 +105,26 @@ li {
 .top-menu a {
 	text-decoration: none;
 	font-size: 2rem;
-	margin: 1.5rem 1rem;
+	margin:  1rem;
 	font-weight: bold;
 	color: white;
 }
 
-.links {
-	width: 100%;
+.top-menu a:active {
+	color: black;
+}
 
-	
+.links {
+
 	display: flex;
 	justify-content: center;
 	flex-flow: column nowrap;
 	align-items:center;
 	text-align: center;
-	justify-self: flex-end;
+
 	
 }
+
 
 
 .links svg{
@@ -125,6 +139,33 @@ li {
 	object-fit:cover;
 	
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	body {
+		font-size: 1.2rem;
+	}
+
+	.content {
+		justify-content: center;
+		align-items:center;
+		
+	}
+
+	ul {
+		
+		display: grid;
+		grid-auto-columns: max-content;
+	
+	}
+}
+
 </style>
 </body>
 </html>
