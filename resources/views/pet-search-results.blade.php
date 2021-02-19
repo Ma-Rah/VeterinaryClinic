@@ -4,7 +4,9 @@
 
 <ul>
 @foreach ($pets as $pet) 
-<li>{{ $pet->name }}, Owner ID: {{$pet->owner_id}}</li>
+<li>
+<a href="{{action('PetsController@show', $pet->id)}}">
+{{ $pet->name }}, Owner ID: {{$pet->owner_id}}</a></li>
 @endforeach
 
 </ul>
