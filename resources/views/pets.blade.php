@@ -7,7 +7,7 @@
 
 <ul>
 	@foreach ($pets as $pet)
-	<li >
+	<li >Name: 
 	<a href="{{action('PetsController@show', $pet->id)}}">
 	
 	{{$pet->name}}</a></li>

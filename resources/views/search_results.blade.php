@@ -4,7 +4,11 @@
 
 <ul>
 @foreach ($owners as $owner) 
-<li>{{ $owner->first_name }} {{$owner->surname}} ID: {{$owner->id}}</li>
+<li>
+<a href="{{action('OwnersController@show', $owner->id)}}">
+{{ $owner->first_name}} {{$owner->surname}} -  Owner ID: {{$owner->id}}</a></li>
+
+
 @endforeach
 
 </ul>

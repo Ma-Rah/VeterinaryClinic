@@ -24,7 +24,6 @@
 			</form>
 
 			<br>
-
 			<form action="{{ action('PetsController@search') }} ">
 				<input type="text" placeholder='search for a pet' name='search'>
 				<button action='submit'>Search</button>
@@ -109,6 +108,21 @@ li {
 	display:flex;
 	justify-content: center;
 	align-items: center;
+	padding: 0 1rem;
+}
+
+input {
+	margin: 0 0.1rem;
+	
+	height: 20px;
+}
+
+button {
+	margin-right: 2rem;
+	border: 1px solid black;
+	background: white;
+
+	
 }
 
 .top-menu a {
@@ -142,8 +156,8 @@ li {
 }
 
 .pet-photo {
-	height: 300px;
-	width: 300px;
+	height: 400px;
+	width: 400px;
 	border-radius: 5px;
 	object-fit:cover;
 	
