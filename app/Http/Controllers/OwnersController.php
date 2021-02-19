@@ -3,11 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OwnersController extends Controller
 {
-    public function index() 
+	public function index() 
     { 
-        return view('owners');
+		$owners = DB::table('owners')->get();
+		
+        return view('owners', compact('owners'));
+    }
+
+	public function show($id)
+    {
+        $owner = DB::table("owners")->find($id);
+      
+        return view("owner_info.owner_info", compact(["owner"]));
     }
 }

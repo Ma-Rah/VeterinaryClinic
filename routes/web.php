@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', 'HomeController@index');
 
 Route::get('/owners', 'OwnersController@index');
+Route::get('/owners/{id}', 'OwnersController@show');
 
 Route::get('/pets', 'PetsController@index');
+Route::get('/pets/{id}', 'PetsController@show');
 
 Route::get('/results', 'ResultsController@index');

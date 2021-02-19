@@ -3,11 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PetsController extends Controller
 {
     public function index() 
     { 
-        return view('pets');
+		$pets = DB::table('pets')->get();
+		
+        return view('pets', compact('pets'));
+    }
+
+	public function show($id)
+    {
+        $pet = DB::table("pets")->find($id);
+      
+        return view("pet_info.pet_info", compact(["pet"]));
     }
 }
