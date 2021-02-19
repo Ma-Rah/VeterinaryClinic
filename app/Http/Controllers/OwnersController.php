@@ -25,9 +25,10 @@ class OwnersController extends Controller
 
     public function search(Request $request)
     { 
-        $search = $request->search();
-        $owner = Owner::where('name', 'like', '%'.$search.'%')->get();
+        $search = $request->search;
+        $owners = Owner::where('first_name', 'like', '%'.$search.'%')->orWhere('surname', 'like', '%'.$search.'%')->get();
 
-        return view('search_results', compact(['owner','pets']));
+
+        return view('search_results', compact(['owners']));
     }
 }

@@ -2,14 +2,10 @@
 
 @section('content')
 
-<h1>Owner: {{$owner->first_name}} {{$owner->surname}}</h1>
-
-<h2>Pets:</h2>
-
 <ul>
-@foreach ($pets as $pet)
-<li><a href="{{action('PetsController@show', $pet->id)}}">{{$pet->name}}</a></li>
+@foreach ($owners as $owner) 
+<li>{{ $owner->first_name }} {{$owner->surname}} ID: {{$owner->id}}</li>
 @endforeach
-</ul>
 
+</ul>
 @endsection

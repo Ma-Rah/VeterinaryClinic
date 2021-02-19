@@ -19,9 +19,18 @@
 		])
 
 			<form action="{{ action('OwnersController@search') }} ">
-				<input type="text" placeholder='search for a dog or a owner' name='search'>
+				<input type="text" placeholder='search for an owner' name='search'>
 				<button action='submit'>Search</button>
 			</form>
+
+			<br>
+
+			<form action="{{ action('PetsController@search') }} ">
+				<input type="text" placeholder='search for a pet' name='search'>
+				<button action='submit'>Search</button>
+			</form>
+
+			
 
 	</div>
 

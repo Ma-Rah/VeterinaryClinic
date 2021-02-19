@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pet;
+use App\Models\Owner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,5 +24,13 @@ class PetsController extends Controller
 		$owner =  DB::table("owners")->where('id', $pet->owner_id)->get();
 		
         return view("pet_info.pet_info", compact(["pet",'owner']));
+    }
+
+    public function search(Request $request)
+    { 
+        $search = $request->search;
+        $pets = Pet::where('name', 'like', '%'.$search.'%')->get();
+
+        return view('pet-search-results', compact(['pets']));
     }
 }
